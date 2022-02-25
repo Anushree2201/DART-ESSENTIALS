@@ -1,0 +1,15 @@
+import 'dart:io';
+
+void main() {
+  print("Enter your number=");
+  int? n = int.parse(stdin.readLineSync()!);
+  oddeve(n);
+}
+
+void oddeve(int num1) {
+  if (num1 % 2 == 0) {
+    print("$num1 is an even number");
+  } else {
+    print("$num1 is an odd number");
+  }
+}
