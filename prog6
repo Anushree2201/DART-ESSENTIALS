@@ -1,0 +1,20 @@
+import 'dart:io';
+
+void main() {
+  int n1 = 0, n2 = 1;
+  stdout.write("Enter number of terms that you want");
+  int? total = int.parse(stdin.readLineSync()!);
+  print(n1);
+  print(n2);
+  Fseries(total - 2, n1, n2);
+}
+
+void Fseries(int total, int num1, int num2) {
+  if (total > 0) {
+    int newnum = num1 + num2;
+    print(newnum);
+    num1 = num2;
+    num2 = newnum;
+    Fseries(total - 1, num1, num2);
+  }
+}
